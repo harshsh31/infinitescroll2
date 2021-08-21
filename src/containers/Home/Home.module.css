@@ -1,0 +1,107 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.container .imgHolder {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .imgHolder .imgContactContainer {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  padding: 10px;
+  transition: all 0.25s linear;
+}
+.imgContactContainer.controlsLoader {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  background-image: linear-gradient(
+    90deg,
+    #f2f2f2 0px,
+    #e2e3e5 50%,
+    #f2f2f2 100%
+  );
+  background-size: 600px;
+  animation: loading 0.5s infinite;
+}
+.imgContactContainer.controlsLoader .centerPositionText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 1.4rem;
+  color: #6e757d;
+}
+.container .imgHolder .imgContactContainer .imgContainer {
+  border-radius: 1.5rem;
+  margin-bottom: 5px;
+}
+.container .imgHolder .imgContactContainer .imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  opacity: 1;
+  will-change: transform, opacity;
+  border-radius: inherit;
+  filter: unset;
+  transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+.container .imgHolder .imgContactContainer .contactDetails {
+  font-size: 1.2rem;
+  color: #424755;
+  text-align: center;
+}
+
+.imgContactContainer:hover {
+  box-shadow: 0 0px 12px 0px rgba(66, 71, 85, 0.25);
+}
+
+.logoutContainer {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+@keyframes loading {
+  0% {
+    background-position: -100px;
+  }
+
+  40%,
+  100% {
+    background-position: 140px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .container .imgHolder .imgContactContainer {
+    width: 49.5%;
+    margin-right: 1%;
+  }
+  .container .imgHolder .imgContactContainer:nth-child(2n + 2) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .container .imgHolder .imgContactContainer {
+    width: 32.66%;
+    margin-right: 1%;
+  }
+  .container .imgHolder .imgContactContainer:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .imgHolder .imgContactContainer {
+    width: 24.25%;
+    margin-right: 1%;
+  }
+  .container .imgHolder .imgContactContainer:nth-child(4n + 4) {
+    margin-right: 0;
+  }
+}
