@@ -13,7 +13,7 @@ const Login = () => {
   const history = useHistory();
   const onLoginClick = () => {
     const userFound = user.usersList.find(
-      (u) => u.username == userName && u.password == password
+      (u) => u.username === userName && u.password === password
     );
     if (userFound) {
       dispatch(userActions.addUserDetails({ userName, password }));

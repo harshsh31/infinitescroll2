@@ -1,5 +1,5 @@
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
-import React, { Suspense, lazy, useState } from "react";
+import React, { Suspense, lazy } from "react";
 import { useSelector } from "react-redux";
 
 const Login = lazy(() => import("./containers/Login/Login"));

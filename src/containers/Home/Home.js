@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import s from "./Home.module.css";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
@@ -45,10 +45,6 @@ const Home = () => {
     }
     dispatch(photosActions.setLoadingPhotos(true));
   }
-  const loadingCSS = {
-    height: "100px",
-    margin: "30px",
-  };
   return (
     <div className={s.container}>
       <div className={s.logoutContainer}>
